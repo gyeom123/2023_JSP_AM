@@ -21,7 +21,7 @@ public class ArticleDetailServlet extends HttpServlet {
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Connection conn = null; 
+		Connection conn = null;
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
