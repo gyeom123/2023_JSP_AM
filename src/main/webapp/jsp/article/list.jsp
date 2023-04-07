@@ -52,8 +52,9 @@
 			font-size: 1.2rem;
 		}
 	</style>
-	
-	<div class="paging">
+
+	<!-- 토탈 페이지 -->
+	<div class="paging"> 
 		<%for (int i = 1; i <= totalPage; i++) { %>
 			<a class="<%= cPage == i ? "red" : ""%>" href="list?page=<%= i %>"><%= i %></a>
 		<% } %>
