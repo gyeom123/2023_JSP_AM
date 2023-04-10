@@ -12,6 +12,33 @@ CREATE TABLE article(
 	`body` TEXT NOT NULL
 );
 
+# member 테이블 생성
+CREATE TABLE `member`(
+	id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	regDate DATETIME NOT NULL,
+	updateDate DATETIME NOT NULL,
+	loginId VARCHAR(30) NOT NULL,
+	loginPw VARCHAR(30) NOT NULL,
+	`name` VARCHAR(30) NOT NULL
+);
+
+# member 테스트 데이터
+INSERT INTO MEMBER
+SET regDate = NOW(),
+updateDate = NOW(),
+loginId = 'test1',
+loginPw = 'test1',
+`name` = 'test1';
+
+# member 테스트 데이터
+INSERT INTO MEMBER
+SET regDate = NOW(),
+updateDate = NOW(),
+loginId = 'test2',
+loginPw = 'test2',
+`name` = 'test2';
+
+
 # article 테스트 데이터
 INSERT INTO article
 SET regDate = NOW(),
@@ -32,3 +59,4 @@ title = 'test3',
 `body` = 'test3';
 
 SELECT * FROM article;
+SELECT * FROM `member`;
